@@ -1,0 +1,28 @@
+#home-header.background {
+    position: relative;
+    color: #fff;
+    min-height: 690px;
+    z-index: 1000;
+    background-color: gray;
+    background-image: url('background.jpg')
+}
+
+#home-header .container, #home-header .align-items-center {
+    min-height: 690px;
+}
+
+#home-header .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#home-header .title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#home-header .countdown-number {
+    font-size: 5rem;
+}
