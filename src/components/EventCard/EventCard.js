@@ -31,7 +31,7 @@ class EventCard extends React.Component {
                             { event.title }
                         </h5>
                         <p className="card-text txt-ellipsis">
-                            <Moment format="DD MMM" date={new Date(event.fieldEditionStartDate.date)} /> - <Moment format="DD MMM YYYY" date={new Date(event.fieldEditionEndDate.date)} />
+                            <Moment format="DD MMM" date={new Date(event.fieldEditionStartDate.value)} /> - <Moment format="DD MMM YYYY" date={new Date(event.fieldEditionEndDate.value)} />
                         </p>
                         <p className="card-text txt-ellipsis">
                             { event.fieldEditionPlace }&nbsp;
@@ -40,7 +40,7 @@ class EventCard extends React.Component {
                     </div>
                     <div className="card-footer">
                         <small className="text-muted">
-                            <Countdown date={ new Date(event.fieldEditionStartDate.date).getTime() } renderer={countdownRenderer} className="countdown" />
+                            <Countdown date={ new Date(event.fieldEditionStartDate.value).getTime() } renderer={countdownRenderer} className="countdown" />
                         </small>
                     </div>
                 </div>

@@ -48,9 +48,9 @@ class HomeHeader extends React.Component {
     render() {
         const nextEvent = this.props.nextEvent;
         if (nextEvent) {
-            console.log(moment(nextEvent.fieldEditionStartDate.date).format('MMM d YY'));
-            console.log(nextEvent.fieldEditionStartDate.date);
-            console.log(new Date(nextEvent.fieldEditionStartDate.date));
+            console.log(moment(nextEvent.fieldEditionStartDate.value).format('MMM d YY'));
+            console.log(nextEvent.fieldEditionStartDate.value);
+            console.log(new Date(nextEvent.fieldEditionStartDate.value));
         }
         return (
             <div id="home-header" className="background">
@@ -65,7 +65,7 @@ class HomeHeader extends React.Component {
                                     <div className="title">
                                         { nextEvent.title }
                                     </div>
-                                    <Countdown date={ new Date(nextEvent.fieldEditionStartDate.date).getTime() } renderer={countdownRenderer} className="countdown" />
+                                    <Countdown date={ new Date(nextEvent.fieldEditionStartDate.value).getTime() } renderer={countdownRenderer} className="countdown" />
                                 </div>
                             ) : (
                                 <div></div>

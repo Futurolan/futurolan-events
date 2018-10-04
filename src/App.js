@@ -17,7 +17,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const apiUrl = "https://backoffice.gamers-assembly.net/graphql?query=%7B%20nodeQuery(filter:%20%7Bconditions:%20[%7Bfield:%20%22type%22,%20value:%20[%22edition%22],%20operator:%20EQUAL%7D,%20%7Bfield:%20%22status%22,%20value:%20[%221%22]%7D]%7D)%20%7B%20entities%20%7B%20...%20on%20NodeEdition%20%7B%20title%20fieldEditionUrl%20fieldEditionStartDate%20%7B%20date%20%7D%20fieldEditionEndDate%20%7B%20date%20%7D%20fieldEditionPlace%20fieldEditionImage%7B%20url%20%7D%20%7D%20%7D%20%7D%20%7D";
+        const apiUrl = "https://backoffice.gamers-assembly.net/graphql?query=%7B%20nodeQuery(filter:%20%7Bconditions:%20[%7Bfield:%20%22type%22,%20value:%20[%22edition%22],%20operator:%20EQUAL%7D,%20%7Bfield:%20%22status%22,%20value:%20[%221%22]%7D]%7D)%20%7B%20entities%20%7B%20...%20on%20NodeEdition%20%7B%20title%20fieldEditionUrl%20fieldEditionStartDate%20%7B%20value%20%7D%20fieldEditionEndDate%20%7B%20value%20%7D%20fieldEditionPlace%20fieldEditionImage%7B%20url%20%7D%20%7D%20%7D%20%7D%20%7D";
 
         fetch(apiUrl)
         .then(res => res.json())
