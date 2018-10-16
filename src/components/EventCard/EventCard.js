@@ -22,7 +22,7 @@ class EventCard extends React.Component {
                     <a href={event.fieldEditionUrl} target="_blank" className="card-link">&nbsp;</a>
                     {/*<div className="card-header">Header</div>*/}
                     { event.fieldEditionImage ? (
-                        <img className="card-img-top" src={ event.fieldEditionImage } alt={ event.title } />
+                        <img className="card-img-top" src={ event.fieldEditionImage.crop.url } alt={ event.title } />
                     ) : (
                         <img className="card-img-top" src={ defaultBackground } alt={ event.title } />
                     )}
